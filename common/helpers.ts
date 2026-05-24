@@ -93,7 +93,7 @@ export async function getAssetMetadataAsync(arg: GetAssetMetadataArg) {
     key,
     fileExtension: `.${keyExtensionSuffix}`,
     contentType,
-    url: `${process.env.HOSTNAME}/api/assets?asset=${assetFilePath.replace(/\\/g, '/')}&runtimeVersion=${arg.runtimeVersion}&platform=${arg.platform}`,
+    url: `${process.env.HOSTNAME}/api/assets?asset=${normalizedFilePath}&runtimeVersion=${arg.runtimeVersion}&platform=${arg.platform}`,
   };
 }
 
