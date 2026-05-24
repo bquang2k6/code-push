@@ -140,7 +140,7 @@ async function putUpdateInResponseAsync(
       (platformSpecificMetadata.assets as any[]).map((asset: any) =>
         getAssetMetadataAsync({
           updateBundlePath,
-          filePath: asset.path,
+          filePath: asset.path.replace(/\\/g, '/'),
           ext: asset.ext,
           runtimeVersion,
           platform,
@@ -150,7 +150,7 @@ async function putUpdateInResponseAsync(
     ),
     launchAsset: await getAssetMetadataAsync({
       updateBundlePath,
-      filePath: platformSpecificMetadata.bundle,
+      filePath: platformSpecificMetadata.bundle.replace(/\\/g, '/'),
       isLaunchAsset: true,
       runtimeVersion,
       platform,
