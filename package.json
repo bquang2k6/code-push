@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "set PRIVATE_KEY_PATH=code-signing-keys/private-key.pem && next dev --turbopack",
+    "dev": "set PRIVATE_KEY_PATH=code-signing-keys/private-key.pem && next dev",
     "start": "set PRIVATE_KEY_PATH=code-signing-keys/private-key.pem && next start",
     "build": "next build",
     "lint": "eslint common pages",
@@ -16,8 +16,8 @@
     "form-data": "^4.0.4",
     "mime": "^2.5.2",
     "next": "^16.2.6",
-    "react": "^19.1.1",
-    "react-dom": "^19.1.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "structured-headers": "^0.4.1"
   },
   "devDependencies": {
