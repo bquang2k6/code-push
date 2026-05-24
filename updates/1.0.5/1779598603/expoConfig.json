@@ -1,0 +1,270 @@
+{
+  "name": "Locket Wan",
+  "slug": "locket-wan",
+  "version": "1.0.5",
+  "orientation": "portrait",
+  "icon": "./assets/images/icon.png",
+  "scheme": "myapp",
+  "userInterfaceStyle": "automatic",
+  "newArchEnabled": true,
+  "ios": {
+    "bundleIdentifier": "com.wan.locket-wan",
+    "supportsTablet": true,
+    "infoPlist": {
+      "ITSAppUsesNonExemptEncryption": false,
+      "NSCameraUsageDescription": "Ứng dụng cần camera để chụp ảnh và quay video",
+      "NSMicrophoneUsageDescription": "Ứng dụng không ghi âm, chỉ dùng để quay video"
+    },
+    "runtimeVersion": "1.0.5"
+  },
+  "android": {
+    "package": "com.quang2k6.locketwan",
+    "googleServicesFile": "./google-services.json",
+    "permissions": [
+      "CAMERA",
+      "RECORD_AUDIO",
+      "FOREGROUND_SERVICE",
+      "FOREGROUND_SERVICE_DATA_SYNC",
+      "WAKE_LOCK",
+      "ACCESS_NETWORK_STATE",
+      "android.permission.CAMERA",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.WAKE_LOCK",
+      "android.permission.ACCESS_NETWORK_STATE"
+    ],
+    "adaptiveIcon": {
+      "backgroundColor": "#E6F4FE",
+      "foregroundImage": "./assets/images/android-icon-foreground.png",
+      "backgroundImage": "./assets/images/android-icon-background.png",
+      "monochromeImage": "./assets/images/android-icon-monochrome.png"
+    },
+    "edgeToEdgeEnabled": true,
+    "predictiveBackGestureEnabled": false,
+    "runtimeVersion": "1.0.5"
+  },
+  "web": {
+    "output": "static",
+    "favicon": "./assets/images/favicon.png"
+  },
+  "plugins": [
+    "expo-router",
+    [
+      "expo-camera",
+      {
+        "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera"
+      }
+    ],
+    "react-native-compressor",
+    "expo-notifications",
+    "@react-native-firebase/app",
+    "@react-native-firebase/crashlytics",
+    "./withBackgroundActions.js",
+    "./withSSLPinning.js",
+    "./withDynamicAppIconFix.js",
+    [
+      "expo-dynamic-app-icon",
+      {
+        "gold": {
+          "image": "./assets/images/icon-gold.jpg",
+          "prerendered": true
+        },
+        "dark": {
+          "image": "./assets/images/icon-dark.jpg",
+          "prerendered": true
+        },
+        "neon": {
+          "image": "./assets/images/icon-neon.jpg",
+          "prerendered": true
+        },
+        "locket5": {
+          "image": "./assets/icon/assets_png_app_icons_ic_black_on_gold.png",
+          "prerendered": true
+        },
+        "locket6": {
+          "image": "./assets/icon/assets_png_app_icons_ic_default.png",
+          "prerendered": true
+        },
+        "locket7": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flat_blue.png",
+          "prerendered": true
+        },
+        "locket8": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flat_pink.png",
+          "prerendered": true
+        },
+        "locket9": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flat_purple.png",
+          "prerendered": true
+        },
+        "locket11": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flowers_autumn.png",
+          "prerendered": true
+        },
+        "locket12": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flowers_beige.png",
+          "prerendered": true
+        },
+        "locket13": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flowers_magenta.png",
+          "prerendered": true
+        },
+        "locket14": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flowers_pink.png",
+          "prerendered": true
+        },
+        "locket15": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gem_bg_candy.png",
+          "prerendered": true
+        },
+        "locket16": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gem_bg_mono.png",
+          "prerendered": true
+        },
+        "locket17": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gem_bg_multi.png",
+          "prerendered": true
+        },
+        "locket18": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gem_bg_pink.png",
+          "prerendered": true
+        },
+        "locket19": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gold.png",
+          "prerendered": true
+        },
+        "locket20": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gold_on_black.png",
+          "prerendered": true
+        },
+        "locket21": {
+          "image": "./assets/icon/assets_png_app_icons_ic_gold_on_black_outline.png",
+          "prerendered": true
+        },
+        "locket22": {
+          "image": "./assets/icon/assets_png_app_icons_ic_light_hearts.png",
+          "prerendered": true
+        },
+        "locket23": {
+          "image": "./assets/icon/assets_png_app_icons_ic_neon_blue.png",
+          "prerendered": true
+        },
+        "locket24": {
+          "image": "./assets/icon/assets_png_app_icons_ic_neon_green.png",
+          "prerendered": true
+        },
+        "locket25": {
+          "image": "./assets/icon/assets_png_app_icons_ic_neon_pink.png",
+          "prerendered": true
+        },
+        "locket26": {
+          "image": "./assets/icon/assets_png_app_icons_ic_neon_yellow.png",
+          "prerendered": true
+        },
+        "locket27": {
+          "image": "./assets/icon/assets_png_app_icons_ic_notebook.png",
+          "prerendered": true
+        },
+        "locket28": {
+          "image": "./assets/icon/assets_png_app_icons_ic_pastel_3d_blue.png",
+          "prerendered": true
+        },
+        "locket29": {
+          "image": "./assets/icon/assets_png_app_icons_ic_flat_yellow.png",
+          "prerendered": true
+        },
+        "locket30": {
+          "image": "./assets/icon/assets_png_app_icons_ic_pastel_3d_gold.png",
+          "prerendered": true
+        },
+        "locket31": {
+          "image": "./assets/icon/snowlocket.png",
+          "prerendered": true
+        },
+        "locket32": {
+          "image": "./assets/icon/assets_png_app_icons_ic_pastel_3d_green.png",
+          "prerendered": true
+        },
+        "locket33": {
+          "image": "./assets/icon/assets_png_app_icons_ic_pastel_3d_pink.png",
+          "prerendered": true
+        },
+        "locket34": {
+          "image": "./assets/icon/assets_png_app_icons_ic_pendant.png",
+          "prerendered": true
+        },
+        "locket35": {
+          "image": "./assets/icon/assets_png_app_icons_ic_photos_hearts_black.png",
+          "prerendered": true
+        },
+        "locket36": {
+          "image": "./assets/icon/assets_png_app_icons_ic_photos_hearts.png",
+          "prerendered": true
+        },
+        "locket37": {
+          "image": "./assets/icon/assets_png_app_icons_ic_waves_black.png",
+          "prerendered": true
+        },
+        "locket38": {
+          "image": "./assets/icon/assets_png_app_icons_ic_tunnel.png",
+          "prerendered": true
+        },
+        "locket39": {
+          "image": "./assets/icon/assets_png_app_icons_ic_waves_gold.png",
+          "prerendered": true
+        },
+        "locket40": {
+          "image": "./assets/icon/assets_png_app_icons_ic_waves_blue.png",
+          "prerendered": true
+        },
+        "locket41": {
+          "image": "./assets/icon/assets_png_app_icons_ic_waves_purple.png",
+          "prerendered": true
+        },
+        "locket42": {
+          "image": "./assets/icon/assets_png_app_icons_ic_year_of_the_horse.png",
+          "prerendered": true
+        }
+      }
+    ],
+    "expo-video",
+    [
+      "expo-build-properties",
+      {
+        "android": {
+          "usesCleartextTraffic": true
+        }
+      }
+    ]
+  ],
+  "experiments": {
+    "typedRoutes": true,
+    "reactCompiler": true
+  },
+  "extra": {
+    "BASE_API_URL": "https://apilocketwan.traidep.site",
+    "BASE_API_URL_DB": "https://api4.wangtech.top",
+    "BASE_API_URL_WS": "https://wslocketwan.wibu.life",
+    "router": {},
+    "eas": {
+      "projectId": "1d35bd34-381a-4ae8-8185-efb493676bc7"
+    },
+    "changelog": "✨ Cập nhật mới \n\n• fixxxxxxxxxx",
+    "minNativeVersion": "1.0.5",
+    "downloadUrl": "https://apk.locket-wan.top"
+  },
+  "owner": "wantech",
+  "updates": {
+    "url": "https://code-push.wangtech.top/api/manifest",
+    "checkAutomatically": "ON_ERROR_RECOVERY",
+    "fallbackToCacheTimeout": 0,
+    "enabled": true
+  },
+  "sdkVersion": "54.0.0",
+  "platforms": [
+    "ios",
+    "android",
+    "web"
+  ]
+}
