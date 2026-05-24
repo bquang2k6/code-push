@@ -47,9 +47,13 @@ export default async function assetsEndpoint(req: NextApiRequest, res: NextApiRe
     runtimeVersion,
   });
 
-  const assetPath = path.resolve(assetName);
+  // Normalize paths for comparison
   const normalizedAssetName = assetName.replace(/\\/g, '/');
   const normalizedUpdateBundlePath = updateBundlePath.replace(/\\/g, '/');
+
+  // Construct full asset path
+  const fullAssetPath = `${updateBundlePath}/${normalizedAssetName}`;
+  const resolvedAssetPath = path.resolve(fullAssetPath);
 
   const assetMetadata = metadataJson.fileMetadata[platform].assets.find(
     (asset: any) => asset.path === normalizedAssetName.replace(`${normalizedUpdateBundlePath}/`, ''),
@@ -57,14 +61,14 @@ export default async function assetsEndpoint(req: NextApiRequest, res: NextApiRe
   const isLaunchAsset =
     metadataJson.fileMetadata[platform].bundle === normalizedAssetName.replace(`${normalizedUpdateBundlePath}/`, '');
 
-  if (!fs.existsSync(assetPath)) {
+  if (!fs.existsSync(resolvedAssetPath)) {
     res.statusCode = 404;
-    res.json({ error: `Asset "${assetName}" does not exist.` });
+    res.json({ error: `Asset "${assetName}" does not exist at "${resolvedAssetPath}".` });
     return;
   }
 
   try {
-    const asset = await fsPromises.readFile(assetPath, null);
+    const asset = await fsPromises.readFile(resolvedAssetPath, null);
 
     res.statusCode = 200;
     res.setHeader(
