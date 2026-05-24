@@ -79,7 +79,9 @@ type GetAssetMetadataArg =
     };
 
 export async function getAssetMetadataAsync(arg: GetAssetMetadataArg) {
-  const assetFilePath = `${arg.updateBundlePath}/${arg.filePath}`;
+  // Normalize path separators to forward slashes for cross-platform compatibility
+  const normalizedFilePath = arg.filePath.replace(/\\/g, '/');
+  const assetFilePath = `${arg.updateBundlePath}/${normalizedFilePath}`;
   const asset = await fs.readFile(path.resolve(assetFilePath), null);
   const assetHash = getBase64URLEncoding(createHash(asset, 'sha256', 'base64'));
   const key = createHash(asset, 'md5', 'hex');
